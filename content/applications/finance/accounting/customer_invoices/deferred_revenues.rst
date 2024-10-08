@@ -43,9 +43,13 @@ Generate Entries
   :ref:`generate them manually <customer_invoices/deferred/generate_manually>` by selecting the
   :guilabel:`Manually & Grouped` option instead.
 Amount Computation
-  Suppose an invoice of $1200 must be deferred over 12 months. The :guilabel:`Equal per month`
-  computation accounts for $100 each month, while the :guilabel:`Based on days` computation
-  accounts for different amounts depending on the number of days in each month.
+  Suppose an invoice of $1200 must be deferred over 12 months. The :guilabel:`Months` option
+  accounts for $100 each month prorated to the number of days in that month (e.g. $50 for the first
+  month if the :guilabel:`Start Date` is set to the 15th of the month), while the
+  :guilabel:`Full Months` option considers each month started to be full (e.g. $100 for the first
+  month even if the :guilabel:`Start Date` is set to the 15th of the month); this means that the
+  last month will recognize $0. Finally the :guilabel:`Days` option accounts for different amounts
+  depending on the number of days in each month (e.g. ~$102 for January and $92 for February).
 
 .. _customer_invoices/deferred/generate_on_validation:
 
